@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+  </head>
+      <style type="text/css">
+      p {
+ 	 font-family: 'Alex Brush';
+ 	 font-size: 4em;
+ 	 text-align: center;
+ 	 color: white;  
+  	 position: relative;
+  	 z-index: 1;
+         }
+      p3 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 3em;
+ 	 text-align: center;
+ 	 color: white;
+	 font-weight: bolder;"
+         }
+       p4 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 2em;
+ 	 text-align: center;
+ 	 color: white;"
+         }
+       body{
+  	background-image:url('OS91.jpg');
+  	background-position: center;
+  	background-size: cover;
+	  }
+   </style>
+  <p> INTRODUCTION </p>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Why do we need scheduling?
+  </p3>
+  <br>
+  <br/>
+  <p4>
+  A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this   time. In multi programming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling.
+  </p4>
+  <br>
+  <br/>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Objectives of Process Scheduling Algorithm:
+  </p3>
+  <br/>
+  <br>
+ <p4>Max CPU utilization [Keep CPU as busy as possible]</p4><br>
+
+ <p4>Fair allocation of CPU.</p4><br>
+
+ <p4>Max throughput [Number of processes that complete their execution per time unit]</p4><br>
+
+ <p4>Min turnaround time [Time taken by a process to finish execution]</p4><br>
+
+ <p4>Min waiting time [Time a process waits in ready queue]</p4><br>
+
+ <p4>Min response time [Time when a process produces first response]</p4><br>
+  <br/>
+  <br>
+  <br/>
+  <br>
+  <br/>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Types of CPU Scheduling
+  </p3><br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Here are two kinds of Scheduling methods:
+  </p3>
+  <br/>
+  <br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Preemptive Scheduling:
+  </p3>
+  <br>
+  <p4>In Preemptive Scheduling, the tasks are mostly assigned with their priorities. Sometimes it is important to run a task with a higher priority before another lower priority task, even if the lower priority task is still running. The lower priority task holds for some time and resumes when the higher priority task finishes its execution.</p4><br>
+  <br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Non-Preemptive Scheduling:
+  </p3>
+  <br>
+  <p4>In this type of scheduling method, the CPU has been allocated to a specific process. The process that keeps the CPU busy will release the CPU either by switching context or terminating. It is the only method that can be used for various hardware platforms. That's because it doesn't need special hardware (for example, a timer) like preemptive scheduling.</p4><br>
+  <br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  When scheduling is Preemptive or Non-Preemptive?
+  </p3>
+  <br>
+  <br>
+  <p4>To determine if scheduling is preemptive or non-preemptive, consider these four parameters:</p4><br>
+   <br>
+  <p4>1. A process switches from the running to the waiting state.</p4><br>
+
+  <p4>2. Specific process switches from the running state to the ready state.</p4><br>
+
+  <p4>3. Specific process switches from the waiting state to the ready state.</p4><br>
+
+  <p4>4. Process finished its execution and terminated.</p4><br>
+  <br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  Important CPU scheduling Terminologies:
+  </p3>
+  <br>
+  <br>
+  <p4>•	Burst Time/Execution Time: It is a time required by the process to complete execution. It is also called running time.</p4><br>
+
+  <p4>•	Arrival Time: when a process enters in a ready state</p4><br>
+
+  <p4>•	Finish Time: when process complete and exit from a system</p4><br>
+
+  <p4>•	Multiprogramming: A number of programs which can be present in memory at the same time.</p4><br>
+
+  <p4>•	Jobs: It is a type of program without any kind of user interaction.</p4><br>
+
+  <p4>•	User: It is a kind of program having user interaction.</p4><br>
+
+  <p4>•	Process: It is the reference that is used for both job and user.</p4><br>
+ 
+  <p4>•	CPU/IO burst cycle: Characterizes process execution, which alternates between CPU and I/O activity. CPU times are usually shorter than the time of I/O.</p4><br>
+
+  <br>
+  <br>
+  <p3 style="font-weight=bolder; font-size: 2em;">
+  The Purpose of a Scheduling algorithm
+  </p3>
+  <br>
+  <br>
+  <p4 style="font-size: 1em;">Here are the reasons for using a scheduling algorithm:</p4><br>
+   <br>
+  <p4>•	The CPU uses scheduling to improve its efficiency.</p4><br>
+
+  <p4>•	It helps you to allocate resources among competing processes.</p4><br>
+
+  <p4>•	The maximum utilization of CPU can be obtained with multi-programming.</p4><br>
+
+  <p4>•	The processes which are to be executed are in ready queue.</p4><br>
+  <br>
+  <br>
+  </body>
+</html>

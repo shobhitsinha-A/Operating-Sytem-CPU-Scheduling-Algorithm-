@@ -1,0 +1,66 @@
+body{
+  background-image:url('12.GIF');
+  background-position: center;
+  background-size: cover;
+  }
+
+fresh th {
+        background: linear-gradient(lavender, thistle);
+        text-align: left;
+        height: 400 px;
+        font-family: "Times New Roman", Times, serif;
+      }
+fresh td {
+        border-bottom: 0;
+        border-right: 0;
+        height: 20px;
+        text-align: left;
+	background: linear-gradient(to left, lime, mediumspringgreen);
+        font-family: "Times New Roman", Times, serif;
+      }
+th{
+  background-color: lightyellow;
+  color: darkolivegreen;
+}
+tr{
+  background-color: peachpuff;
+  color: darkolivegreen;
+}
+
+.navbar .navbar-text {
+  color: white;
+  font-size:20px;
+  font-weight:bold;
+  text-align:center;
+  }
+
+  label {
+    cursor: pointer;
+    color: aliceblue;
+    display: block;
+  }
+
+  input[type="number"] + label {
+    color: white;
+    font-weight: bold;
+  }
+
+
+.buttonAlgo{
+    border-radius: 15px !important; 
+    width: 70px;
+    
+}
+
+#timeQuantum{
+  width: 80px;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+}
+#curtain {
+        background -color: white;
+      }

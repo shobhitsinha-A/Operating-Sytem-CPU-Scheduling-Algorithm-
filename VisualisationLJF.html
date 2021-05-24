@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap-simplex.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="bootstrap.js"></script>
+  <script src="slider.js"></script>
+  <link rel="stylesheet" type="text/css" href="cpu-scheduler.css">
+
+  <script type="text/x-mathjax-config">  
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    messageStyle: "none",
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+  </script>
+
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="MathJaxSetup.js">
+  </script>
+
+  <title> CPU scheduling</title>
+</head>
+
+
+<body>
+ <div class="container" >
+
+
+
+  <h2 style="text-align: center;">LONGEST JOB FIRST(Visulisation)</h2>
+
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr> 
+        <th>Process:</th>
+        <th>Arrival Time:</th>
+        <th>Burst Time:</th>
+        <th class="priority collapse">Priority:</th>
+      </tr>
+    </thead>
+    <tbody id="processTable">
+      <tr id="row_1" class="collapse in">
+        <th> P1</th>
+        <td ><input id="arrive_1" type="text" class="form-control" value = "0" /></td>
+        <td ><input  type="text" id="burst_1" class="form-control" value="5"/></td>
+        <td  class="priority collapse"><input id="priority_1" type="text" class="form-control" value="1"/></td>
+      </tr>
+
+      <tr id="row_2" class="collapse in">
+        <th > P2 </th>
+        <td ><input id="arrive_2" type="text" class="form-control" value = "0" /></td>
+        <td ><input type="text" id="burst_2" class="form-control" value="2" /></td>
+        <td  class="priority collapse"><input id="priority_2" type="text" class="form-control" value="2"/></td>
+      </tr>
+
+      <tr id="row_3" class="collapse in">
+        <th  > P3 </th>
+        <td ><input id="arrive_3" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_3" type="text" class="form-control" value="4"/></td>
+        <td  class="priority collapse"><input id="priority_3" type="text" class="form-control" value="3"/></td>
+      </tr>
+
+      <tr id="row_4" class="collapse ">
+        <th > P4 </th>
+        <td ><input id="arrive_4" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_4" type="text" class="form-control" value="1"/></td>
+        <td  class="priority collapse"><input id="priority_4" type="text" class="form-control" value="4"/></td>
+      </tr>
+
+      <tr id="row_5" class="collapse">
+        <th > P5 </th>
+        <td ><input id="arrive_5" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_5" type="text" class="form-control" value="2"/></td>
+        <td  class="priority collapse"><input id="priority_5" type="text" class="form-control" value="5"/></td>
+      </tr>
+
+      <tr id="row_6" class="collapse">
+        <th > P6 </th>
+        <td ><input id="arrive_6" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_6" type="text" class="form-control" value="3"/></td>
+        <td  class="priority collapse"><input id="priority_6" type="text" class="form-control" value="6"/></td>
+      </tr>
+
+      <tr id="row_7" class="collapse">
+        <th > P7 </th>
+        <td ><input id="arrive_7" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_7" type="text" class="form-control" value="1"/></td>
+        <td  class="priority collapse"><input id="priority_7" type="text" class="form-control" value="7"/></td>
+      </tr>
+
+      <tr id="row_8" class="collapse">
+        <th > P8 </th>
+        <td ><input id="arrive_8" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_8" type="text" class="form-control" value="4"/></td>
+        <td  class="priority collapse"><input id="priority_8" type="text" class="form-control" value="8"/></td>
+      </tr>
+
+      <tr id="row_9" class="collapse">
+        <th > P9 </th>
+        <td ><input id="arrive_9" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_9" type="text" class="form-control" value="2"/></td>
+        <td  class="priority collapse"><input id="priority_9" type="text" class="form-control" value="9"/></td>
+      </tr>
+
+      <tr id="row_10" class="collapse">
+        <th > P10 </th>
+        <td ><input id="arrive_10" type="text" class="form-control" value = "0" /></td>
+        <td ><input id="burst_10" type="text" class="form-control" value="5"/></td>
+        <td  class="priority collapse"><input id="priority_10" type="text" class="form-control" value="10"/></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+  <div class="progress" style= "height:25px;margin-bottom:0px;" >
+    
+  </div>
+  <ul class= "tick-marks ruler" id="rule2" data-items="10"></ul>
+
+
+
+  <br>
+
+
+
+
+
+  <div class="well" style="margin-top:20px;">
+
+    <div class="row">
+
+       <div class="col-md-4" style="margin-top:20px;">
+        <div style="margin-top:20px; display:inline-block;">
+          <label >Algorithm:</label>
+        </div>
+
+
+        <div class="btn-group algorithm_dropdown" style="margin-left:5px;">
+          <!--<button type="button" id="algorithm_button"class="btn btn-info">
+           LJF
+         </button>-->
+       </div>
+
+        <p style="margin-top:15px;"id="algorithm_explanation">
+        </p>
+
+       </div><!-- /column -->
+        <div class="col-md-4" >
+       <div style="margin-top:20px; ">
+        <label >Number of Processes:</label>
+      </div>
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button id='remove_row' type="button" class="btn btn-default btn-number"  data-type="minus" >
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+        </span>
+        <input id="proccess_num"  disabled="disabled"  class="form-control input-number" value="3"  >
+        <span class="input-group-btn">
+          <button id='add_row' type="button" class="btn btn-default btn-number" data-type="plus" >
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+        </span>
+      </div>
+
+
+      <div style="margin-top:20px; ">
+        <label >Context Switch Time:</label>
+      </div>
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button id= "subtract_context" type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]">
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+        </span>
+        <input id= "enter_context" type="text" name="quant[1]" class="form-control input-number" value="0.0" style="background-color:white">
+        <span class="input-group-btn">
+          <button id= "add_context" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+        </span>
+      </div>
+
+      <div class="hidden" id="solver_group">
+        <div style="margin-top:20px; ">
+          <label >Time Quantum:</label>
+        </div>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button id= "subtract_quantum" type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </span>
+          <input id= "enter_quantum" type="text" name="quant[1]" class="form-control input-number" value="2"  style="background-color:white">
+          <span class="input-group-btn">
+            <button id= "add_quantum" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+
+
+    </div><!-- /column -->
+
+
+    <div class="col-md-4" style="margin-top:20px;">
+
+      <div id="explanation-equation"> 
+      </div>
+
+      <div id="MathPreview" >
+      </div>
+
+      <div  id="MathBuffer" >
+    </div>
+  </div><!-- /column -->
+</div><!-- /row -->
+
+</div><!-- /well -->
+
+
+
+</div><!-- /containter -->
+
+<script src="VisualisationLJF.js"> </script>
+
+
+<script>
+Preview.Init();
+Preview.Update();
+
+</script>
+
+</body>
+
+</html>

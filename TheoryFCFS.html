@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+  </head>
+      <style type="text/css">
+      p {
+ 	 font-family: 'Alex Brush';
+ 	 font-size: 4em;
+ 	 text-align: center;
+ 	 color: white;  
+  	 position: relative;
+  	 z-index: 1;
+         }
+      p3 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 3em;
+ 	 text-align: center;
+ 	 color: white;
+	 font-weight: bolder;"
+         }
+       p4 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 6em;
+ 	 text-align: center;
+ 	 color: white;"
+         }
+       body{
+  	background-image:url('OS91.jpg');
+  	background-position: center;
+  	background-size: cover;
+	  }
+
+   </style>
+  <body style="background-color: black; ">
+  <p> First Come First Serve</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">In FCFS Scheduling,</p4><br>
+   <br>
+  <p4>•	The process which arrives first in the ready queue is firstly assigned the CPU.</p4><br>
+
+  <p4>•	In case of a tie, process with smaller process id is executed first.</p4><br>
+
+  <p4>•	It is always non-preemptive in nature.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Advantages:</p4><br>
+   <br>
+  <p4>•	It is simple and easy to understand.</p4><br>
+
+  <p4>•	It can be easily implemented using queue data structure.</p4><br>
+
+  <p4>•	It does not lead to starvation.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Disadvantages:</p4><br>
+   <br>
+  <p4>•	It does not consider the priority or burst time of the processes.</p4><br>
+
+  <p4>•	It suffers from convoy effect.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em;">Convoy Effect:</p4><br>
+  <br>
+  <p4>•	Consider processes with higher burst time arrived before the processes with smaller burst time.</p4><br>
+  <p4>•	Then, smaller processes have to wait for a long time for longer processes to release the CPU.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em;">First Come First Serve is the full form of FCFS. It is the easiest and most simple CPU scheduling algorithm. In this type of algorithm, the process which requests the CPU gets the CPU allocation first. This scheduling method can be managed with a FIFO queue.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em;">As the process enters the ready queue, its PCB (Process Control Block) is linked with the tail of the queue. So, when CPU becomes free, it should be assigned to the process at the beginning of the queue.</p4><br>  
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Characteristics of FCFS method:</p4><br>
+   <br>
+  <p4>•	It offers non-preemptive and pre-emptive scheduling algorithm.</p4><br>
+
+  <p4>•	Jobs are always executed on a first-come, first-serve basis</p4><br>
+  
+  <p4>•	It is easy to implement and use.</p4><br>
+ 
+  <p4>•	However, this method is poor in performance, and the general wait time is quite high.</p4><br>
+  </body>
+</html>

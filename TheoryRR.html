@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+  </head>
+      <style type="text/css">
+      p {
+ 	 font-family: 'Alex Brush';
+ 	 font-size: 4em;
+ 	 text-align: center;
+ 	 color: white;  
+  	 position: relative;
+  	 z-index: 1;
+         }
+      p3 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 3em;
+ 	 text-align: center;
+ 	 color: white;
+	 font-weight: bolder;"
+         }
+       p4 {
+ 	 style="font-family: 'Alex Brush';
+ 	 font-size: 6em;
+ 	 text-align: center;
+ 	 color: white;"
+         }
+       body{
+  	background-image:url('OS91.jpg');
+  	background-position: center;
+  	background-size: cover;
+	  }
+   </style>
+  <body style="background-color: black;">
+  <p> Round Robin </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Round Robin Scheduling:</p4><br>
+  <br>
+  <br>
+  <p4>•	CPU is assigned to the process on the basis of FCFS for a fixed amount of time.</p4><br>
+  <p4>•	This fixed amount of time is called as time quantum or time slice.</p4><br>
+  <p4>•	After the time quantum expires, the running process is preempted and sent to the ready queue.</p4><br>
+  <p4>•	Then, the processor is assigned to the next arrived process.</p4><br>
+  <p4>•	It is always preemptive in nature.</p4><br>
+  <p4>•	Round Robin Scheduling is FCFS Scheduling with preemptive mode.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Advantages:</p4><br>
+  <br>
+  <br>
+  <p4>•	It gives the best performance in terms of average response time.</p4><br>
+  <p4>•	It is best suited for time sharing system, client server architecture and interactive system.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Disadvantages:</p4><br>
+  <br>
+  <br>
+  <p4>•	It leads to starvation for processes with larger burst time as they have to repeat the cycle many times.</p4><br>
+  <p4>•	Its performance heavily depends on time quantum.</p4><br>
+  <p4>•	Priorities can not be set for the processes.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Important Notes:</p4><br>
+  <br>
+  <p4 style="font-size: 2em; ">Note-01:</p4><br>
+  <br>
+  <p4>With decreasing value of time quantum,</p4><br>
+  <p4>•	Number of context switch increases</p4><br>
+  <p4>•	Response time decreases</p4><br>
+  <p4>•	Chances of starvation decreases</p4><br>
+  <br>
+  <p4 style="font-size: 2em;">Thus, smaller value of time quantum is better in terms of response time.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; ">Note-02:</p4><br>
+  <br>
+  <p4>With increasing value of time quantum,</p4><br>
+  <p4>•	Number of context switch decreases</p4><br>
+  <p4>•	Response time increases</p4><br>
+  <p4>• Chances of starvation increases</p4><br>
+  <br>
+  <p4 style="font-size: 2em;">Thus, higher value of time quantum is better in terms of number of context switch.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; ">Note-03:</p4><br>
+  <br>
+  <p4>•	With increasing value of time quantum, Round Robin Scheduling tends to become FCFS Scheduling.</p4><br>
+  <p4>•	When time quantum tends to infinity, Round Robin Scheduling becomes FCFS Scheduling.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; ">Note-04:</p4><br>
+  <br>
+  <p4>•	The performance of Round Robin scheduling heavily depends on the value of time quantum.</p4><br>
+  <p4>•	The value of time quantum should be such that it is neither too big nor too small.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em;">Round robin is the oldest, simplest scheduling algorithm. The name of this algorithm comes from the round-robin principle, where each person gets an equal share of something in turn. It is mostly used for scheduling algorithms in multitasking. This algorithm method helps for starvation free execution of processes.</p4><br>
+  <br>
+  <br>
+  <p4 style="font-size: 2em; font-weight: bolder;">Characteristics of Round-Robin Scheduling:</p4><br>
+  <p4>•	Round robin is a hybrid model which is clock-driven</p4><br>
+  <p4>•	Time slice should be minimum, which is assigned for a specific task to be processed. However, it may vary for different processes.</p4><br>
+  <p4>•	It is a real time system which responds to the event within a specific time limit.</p4><br>
+  </body>
+</html>
